@@ -8,6 +8,7 @@ import { InitialComponent } from './views/initial.component';
 import { PatientListComponent } from './views/patient-list/patient-list.component';
 import { LocationsComponent } from './views/locations/locations.component';
 import { ReportsComponent } from './views/reports/reports.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ReportsComponent } from './views/reports/reports.component';
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

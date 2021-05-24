@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #dddddd;
+}
+
+/*****************************************/
+/********* START: Media Queries **********/
+/*****************************************/
+
+/***** Up-to 1024px Max *****/
+@media (max-width: 1024px) {
+
+}
+/***** Up-to 768px Max *****/
+@media (max-width: 768px) {
+
+}
+/***** Up-to 425px Max *****/
+@media (max-width: 425px) {
+
+}
+
+/***** Up-to 375px Max *****/
+@media (max-width: 375px) {
+
+}
+
+/***** Up-to 320px Max *****/
+@media (max-width: 320px) {
+
+}
+
+/***** Up-to 280px Max *****/
+@media (max-width: 280px) {
+}
+    
+/***************************************/
+/********* END: Media Queries **********/
+/***************************************/
