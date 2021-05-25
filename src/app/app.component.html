@@ -1,1 +1,55 @@
-<router-outlet></router-outlet>
+<!--------------- Wrapper --------------->
+<div class="wrapper">
+    <!--------------- Top bar -------------->
+    <div class="top-bar"></div>
+
+    <!--------------- Menu right -------------->
+    <div class="menu-right">
+        <a routerLink="/"><div class="list-group">
+            <p class="tag">Search</p>
+        </div></a>
+        <hr />
+        <a routerLink="/patient-list"><div class="list-group">
+            <p class="tag">Patients</p>            
+        </div></a>
+        <hr />
+        <a routerLink="/locations"><div class="list-group">
+            <p class="tag">Locations</p>            
+        </div></a>
+        <hr />
+        <a routerLink="/reports"><div class="list-group">
+            <p class="tag">Reports</p>            
+        </div></a>
+    </div>
+    <!--------------- Main container --------------->
+    <div class="main-container">
+        <!--------------- Main container components --------------->
+        <!--------------- banner --------------->
+        <div class="header-section">
+            <div class="header-left">
+                <div class="logo-holder"><img src={{logo}} alt="logo"/></div>
+            </div>
+            <div class="header-right">
+                <h4>Patient Search</h4>
+                <p>Search for Patient using their name</p>
+                <div class="input-box">
+                    <button>Search</button>
+                    <input  type="text" class="form-control" placeholder="Enter name"/>
+                    <!-- <br /> -->                    
+                </div>
+            </div>
+        </div>
+        <!--------------- Navigation bar --------------->
+        <div class="nav-bar"></div>
+        <!--------------- Bread crumps --------------->
+        <div class="bread-crumps">
+            <p> <a  routerLink="/">Home</a>  /  <span>Patient detail search by name</span></p>
+        </div>
+        <!--------------- Main content --------------->
+        <div class="content-flex">            
+            <router-outlet></router-outlet>
+        </div>
+        <!--------------- Footer Panel --------------->
+        <div class="footer"></div>
+    </div>
+</div>
