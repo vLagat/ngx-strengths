@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ngx-strengths';
   logo = '../assets/icons/logo.png';
+  avatar = '../assets/images/avatar.jpg';
 }
