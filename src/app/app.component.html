@@ -6,20 +6,24 @@
     <!--------------- Menu right -------------->
     <div class="menu-right">
         <a routerLink="/"><div class="list-group">
+            <h5><i class="fa fa-search fa-5x"></i></h5>
             <p class="tag">Search</p>
         </div></a>
         <hr />
         <a routerLink="/patient-list"><div class="list-group">
+            <h5><i class="fa fa-users fa-5x"></i></h5>
             <p class="tag">Patients</p>            
         </div></a>
         <hr />
         <a routerLink="/locations"><div class="list-group">
+            <h5><i class="fa fa-map-marker fa-5x"></i></h5>
             <p class="tag">Locations</p>            
         </div></a>
         <hr />
         <a routerLink="/reports"><div class="list-group">
+            <h5><i class="fa fa-file fa-5x"></i></h5>
             <p class="tag">Reports</p>            
-        </div></a>
+        </div></a> 
     </div>
     <!--------------- Main container --------------->
     <div class="main-container">
@@ -27,7 +31,14 @@
         <!--------------- Banner --------------->
         <div class="header-section">
             <div class="header-left">
-                <div class="logo-holder"><img src={{logo}} alt="logo"/></div>
+                <div class="logo-holder-main">
+                    <div class="logo-holder">
+                        <img src={{logo}} alt="logo"/>
+                    </div>
+                    <div class="label-holder">
+                        <div class="program-label"> <h4>CHRONIC DISEASE MANAGEMENT PROGRAM</h4></div>
+                    </div>
+                </div>
             </div>
             <div class="header-right">
                 <!------------------------------------------------->
@@ -46,21 +57,19 @@
                 <!-------------------------------------------------------->
                 <!-- <div class="search-param">
                     <h4>Patients Data List</h4>
-                    <p>List of all Patients</p>
+                    <p>List of all Patients Registered</p>
                     <div class="input-box">
-                        <button>Search</button>
-                        <input  type="text" class="form-control" placeholder="Enter name"/>                  
+                        <span class="more-info not-italic"><p>Patient List and Their Respective CDM Category</p></span>                 
                     </div>                    
-                </div>                 -->
+                </div>                    -->
                 <!---------------------------------------------------->
                 <!------------- Display in Locations snapshot--------->
-                <!---------------------------------------------------->              
-                    
+                <!---------------------------------------------------->        
                     <!-- <div class="location-param">
                         <h4>Health Facilities</h4>
                         <p>List Of all Healthcare locations</p>
                         <div class="input-box">
-                            <span class="more-info"><p>List of all Point of Care Locations - Records</p></span>                 
+                            <span class="more-info not-italic"><p>List of all Point of Care Locations - Records</p></span>                 
                         </div>                    
                     </div>                -->
                 <!------------------------------------------------->
@@ -70,7 +79,7 @@
                     <h4>CDM Monthly Reports</h4>
                     <p>Chronic Disease Management Reports</p>
                     <div class="input-box">
-                        <span class="more-info"><p>For Diabetic and Hypertensive Patients - Records</p></span>                 
+                        <span class="more-info not-italic"><p>For Diabetic and Hypertensive Patients - Records</p></span>                 
                     </div>                    
                 </div> -->
             </div>
