@@ -237,24 +237,25 @@ body {
     border-collapse: collapse;
     border-spacing: 0;
     font: normal 13px Arial, sans-serif;
-    width: 100%;
+    width: 98%;
+    margin: 0px auto;
 }
 .pt4a-table thead th {
-    background-color: #DDEFEF;
-    border: solid 1px #DDEEEE;
-    color: #336B6B;
+    background-color: #eeeeee;
+    border: solid 1px #dddddd;
+    color: #00adab;
     padding: 10px;
     text-align: left;
-    text-shadow: 1px 1px 1px #fff;
+    /* text-shadow: 1px 1px 1px #fff; */
 }
 .pt4a-table tbody td {
-    border: solid 1px #DDEEEE;
+    border: solid 1px #eeeeee;
     color: #333;
     padding: 10px;
     text-shadow: 1px 1px 1px #fff;
 }
 tr:nth-of-type(odd) {
-    background-color:#ccc;
+    background-color:rgba(0,173,171,.2);
   }
 
 /*****************************************/

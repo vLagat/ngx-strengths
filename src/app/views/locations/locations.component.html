@@ -16,12 +16,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>DeMarcus Cousins</td>
-                        <td>C</td>
-                        <td>$4,917,000</td>
+                    <tr *ngFor="let location of locations">
+                        <td>{{location.id}}</td>
+                        <td>{{location.name}}</td>
+                        <td>{{location.date_created}}</td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>Isaiah Thomas</td>
                         <td>5'9"</td>
                         <td>$473,604</td>
@@ -40,7 +40,7 @@
                         <td>$4,917,000</td>
                         <td>PF</td>
                         <td>6'11"</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>        

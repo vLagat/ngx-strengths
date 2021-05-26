@@ -8,7 +8,7 @@ import { Locations } from '../_model/locations';
 export class LocationService {
     constructor(private http: HttpClient){ }
 
-    url: string = "http://localhost:8000/locations";
+    url: string = "http://localhost:3000/locations";
 
     getLocations() {
         return this.http.get<Locations[]>(this.url);

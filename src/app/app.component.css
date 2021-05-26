@@ -6,15 +6,20 @@
     margin: 4px 0px;
     border-radius: 3px 3px 3px 3px;
 }
-.list-group:hover {
-    width: calc(100% - 3px);
-    background-color:#d1ecf3;
-    border-right: 3px solid #7fd7eb;
+.menu-right a {
+    padding: 8px 0px;
 }
-.list-group:active {
+.menu-right a:hover {
+    color: rgba(0,173,171,.8);
     background-color:#d1ecf3;
-    border-right: 3px solid #1cb2d3;
-    color: #1cb2d3;
+    font-weight: 700;
+    /* width: calc(100% - 3px);
+    background-color:#d1ecf3;
+    border-right: 3px solid #7fd7eb; */
+}
+.menu-right a:active {
+    /* background-color:red; */
+    color: red;
 }
 .menu-right hr {
     width: 80%;

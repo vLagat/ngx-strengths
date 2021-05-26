@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Locations } from '../../_model/locations';
+import { LocationService } from '../../_services/location.service'
 
 @Component({
   selector: 'app-locations',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./locations.component.css']
 })
 export class LocationsComponent implements OnInit {
+  locations: Locations[] = [];
+  constructor(public rs: LocationService){
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
+    this.rs.getLocations().subscribe((response) => {
+      this.locations=response;
+    })
   }
 
 }
