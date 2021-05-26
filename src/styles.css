@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     /* background-color: #f5f5f5; */
-    background-color: #d1ecf3;
+    /* background-color: #d1ecf3; */
     padding: 0;
     margin: 0;
 }
@@ -64,7 +64,7 @@ body {
     padding: 5px 2px;
     border: none;
     padding-left: 10px;
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0,0,0,.1);
     border-radius: 3px 3px 3px 3px;
     color: #000000;
 }
@@ -86,7 +86,7 @@ body {
     float: right;
     margin-top: 0px;
     background-color:rgba(255, 255, 255, .8);
-    border: 1px solid  rgba(0,0,0,.4);
+    border: 1px solid  rgba(0,0,0,.2);
     border-radius: 5px 5px 5px 5px;
 }
 .avatar {
@@ -96,7 +96,7 @@ body {
     float: right;
     margin-top: 2px;
     margin-right: 6px;
-    border: 1px solid  rgba(0,0,0,.4);
+    border: 1px solid  rgba(0,0,0,.3);
 }
 .avatar img {
     width:100%;
@@ -202,10 +202,9 @@ body {
     color:rgba(255, 255, 255, .6);
 }
 .content-flex {
-    overflow: auto;
     height: calc(100vh - 194px);
     background-color: #eeeeee;
-    padding: 10px 10px;
+    margin: 0px auto;
 }
 .footer {
     width: 100%;
@@ -213,6 +212,47 @@ body {
     min-height: 32px;
     border-top: 1px solid #dddddd;
 }
+.no-record h3 {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.p {
+    padding-top: 0px;
+}
+
+/**************************/
+/********* TABLE **********/
+/**************************/
+
+.pt4a-table {
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+    width: 100%;
+}
+.pt4a-table thead th {
+    background-color: #DDEFEF;
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+.pt4a-table tbody td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+tr:nth-of-type(odd) {
+    background-color:#ccc;
+  }
 
 /*****************************************/
 /********* START: Media Queries **********/
