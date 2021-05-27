@@ -227,23 +227,30 @@ body {
     color: #00367e;
     font-weight: 600;
 }
-
+.records-container {
+    width: 77%;
+    height: 100%;
+    min-height: 500px;
+    background-color: #f0f0f0;
+    float: left;
+    border-radius: 8px 0px 0px 0px;
+}
 /**************************/
 /********* TABLE **********/
 /**************************/
 
 .pt4a-table {
-    border: solid 1px #DDEEEE;
+    border: solid 1px #cccccc;
     border-collapse: collapse;
     border-spacing: 0;
     font: normal 13px Arial, sans-serif;
-    width: 98%;
+    width: 100%;
     margin: 0px auto;
 }
 .pt4a-table thead th {
-    background-color: #eeeeee;
+    background-color:rgba(0,173,171,.2);
     border: solid 1px #dddddd;
-    color: #00adab;
+    color: #00367e;
     padding: 10px;
     text-align: left;
     /* text-shadow: 1px 1px 1px #fff; */
@@ -255,7 +262,7 @@ body {
     text-shadow: 1px 1px 1px #fff;
 }
 tr:nth-of-type(odd) {
-    background-color:rgba(0,173,171,.2);
+    background-color:rgba(255, 255, 255,.9);
   }
 
 /*****************************************/

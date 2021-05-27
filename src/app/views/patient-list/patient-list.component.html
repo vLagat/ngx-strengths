@@ -7,67 +7,41 @@
     </div> -->
     <div class="no-record">
         <div class="search-result">
+            <div class="records-container">                
             <h3>All CDM Patient Records</h3>
+            <input type="text" class="form-control" name="name" [(ngModel)]="name" (ngModelChange)="Search()" placeholder="Enter First name to search">
             <table class="pt4a-table">
                 <thead>
                     <tr>
+                        <th>#ID</th>
                         <th>Name</th>
-                        <th>Gender</th>
                         <th>Date Of Birth</th>
-                        <th>Age</th>
+                        <th>Gender</th>
                         <th>Contact Details</th>
+                        <th>Age</th>
+                        <th>Registered On</th>
                         <th>HTN Status</th>
                         <th>DM Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>DeMarcus Cousins</td>
-                        <td>C</td>
-                        <td>6'11"</td>
-                        <td>08-13-1990</td>
-                        <td>$4,917,000</td>
-                        <td>08-13-1990</td>
-                        <td>$4,917,000</td>
-                    </tr>
-                    <tr>
-                        <td>Isaiah Thomas</td>
-                        <td>PG</td>
-                        <td>5'9"</td>
-                        <td>02-07-1989</td>
-                        <td>$473,604</td>
-                        <td>08-13-1990</td>
-                        <td>$4,917,000</td>
-                    </tr>
-                    <tr>
-                        <td>Ben McLemore</td>
-                        <td>SG</td>
-                        <td>6'5"</td>
-                        <td>02-11-1993</td>
-                        <td>$2,895,960</td>
-                        <td>08-13-1990</td>
-                        <td>$4,917,000</td>
-                    </tr>
-                    <tr>
-                        <td>Marcus Thornton</td>
-                        <td>SG</td>
-                        <td>6'4"</td>
-                        <td>05-05-1987</td>
-                        <td>$7,000,000</td>
-                        <td>08-13-1990</td>
-                        <td>$4,917,000</td>
-                    </tr>
-                    <tr>
-                        <td>Jason Thompson</td>
-                        <td>PF</td>
-                        <td>6'11"</td>
-                        <td>06-21-1986</td>
-                        <td>$3,001,000</td>
-                        <td>08-13-1990</td>
-                        <td>$4,917,000</td>
+                    
+                    <tr *ngFor="let patient of patients">
+                        <td>{{patient.patient_id}}</td>
+                        <td>{{patient.name}}</td>
+                        <td>{{patient.dob}}</td>
+                        <td>{{patient.gender}}</td>
+                        <td>{{patient.phone_number}}</td>
+                        <td>{{patient.dob}}</td>
+                        <td>{{patient.date_created}}</td>
+                        <td>{{patient.patient_id}}</td>
+                        <td>{{patient.patient_id}}</td>
                     </tr>
                 </tbody>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
             </table>
+            </div>
+            <div class="more-details-pane"></div>
         </div>        
     </div>
 </div>

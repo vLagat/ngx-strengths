@@ -9,6 +9,8 @@ import { PatientService } from '../../_services/patient.service'
 })
 export class PatientListComponent implements OnInit {
   patients: Patients[] = [];
+  name: any;
+  p:number = 1;
   constructor(public rs: PatientService){
 
   }
@@ -17,6 +19,16 @@ export class PatientListComponent implements OnInit {
     this.rs.getPatients().subscribe((response) => {
       this.patients=response;
     })
+  }
+
+  Search(){
+    if(this.name == ""){
+      this.ngOnInit();
+    } else{
+      this.patients = this.patients.filter(res =>{
+        return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+      });
+    }
   }
 
 }

@@ -8,7 +8,7 @@ import { Patients } from '../_model/patients';
 export class PatientService {
     constructor(private http: HttpClient){ }
 
-    url: string = "http://localhost:8000/patients";
+    url: string = "http://localhost:3000/patients";
 
     getPatients() {
         return this.http.get<Patients[]>(this.url);

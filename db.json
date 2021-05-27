@@ -37,7 +37,7 @@
       },
       {
           "patient_id": 2,
-          "name": "Patient 2",
+          "name": "Victor Lagat",
           "dob": "1990-07-03",
           "gender": "MALE",
           "phone_number": "0726535301",
@@ -56,6 +56,71 @@
           "name": "Patient 4",
           "dob": "1990-07-03",
           "gender": "MALE",
+          "phone_number": "0726535301",
+          "date_created": "2021-09-06"
+      }
+  ],
+  "Reports":[
+      {
+          "patient_name": "Patient 1",
+          "location": "Location 1",
+          "encounter_date": "2021-09-06",
+          "htn_status": "7285",
+          "dm_status": "7281",
+          "phone_number": "0726535301",
+          "date_created": "2021-09-06"
+      },
+      {
+          "patient_name": "Patient 1",
+          "location": "Location 1",
+          "encounter_date": "2021-09-06",
+          "htn_status": "7285",
+          "dm_status": "7281",
+          "phone_number": "0726535301",
+          "date_created": "2021-09-06"
+      },
+      {
+          "patient_name": "Patient 1",
+          "location": "Location 1",
+          "encounter_date": "2021-09-06",
+          "htn_status": "7285",
+          "dm_status": "7281",
+          "phone_number": "0726535301",
+          "date_created": "2021-09-06"
+      },
+      {
+          "patient_name": "Patient 1",
+          "location": "Location 1",
+          "encounter_date": "2021-09-06",
+          "htn_status": "7285",
+          "dm_status": "7281",
+          "phone_number": "0726535301",
+          "date_created": "2021-09-06"
+      },
+      {
+          "patient_name": "Patient 1",
+          "location": "Location 1",
+          "encounter_date": "2021-09-06",
+          "htn_status": "7285",
+          "dm_status": "7281",
+          "phone_number": "0726535301",
+          "date_created": "2021-09-06"
+      },
+      {
+          "patient_name": "Patient 1",
+          "location": "Location 1",
+          "encounter_date": "2021-09-06",
+          "htn_status": "7285",
+          "dm_status": "7281",
+          "phone_number": "0726535301",
+          "date_created": "2021-09-06"
+      },
+      {
+          "patient_name": "Patient 1",
+          "location": "Location 1",
+          "encounter_date": "2021-09-06",
+          "htn_status": "7285",
+          "dm_status": "7281",
           "phone_number": "0726535301",
           "date_created": "2021-09-06"
       }
