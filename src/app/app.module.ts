@@ -16,6 +16,7 @@ import { PatientListComponent } from './views/patient-list/patient-list.componen
 import { LocationsComponent } from './views/locations/locations.component';
 import { ReportsComponent } from './views/reports/reports.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RptDetailComponent } from './views/rpt-detail/rpt-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     InitialComponent,
     PatientListComponent,
     LocationsComponent,
-    ReportsComponent
+    ReportsComponent,
+    RptDetailComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,FormsModule,

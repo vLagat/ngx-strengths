@@ -5,7 +5,7 @@
         <h6>No Patient Record to View</h6>
         <p>Please Search for patient using name to generate Patient Information</p>        
     </div> -->
-    <div class="no-record">
+    <!-- <div class="no-record">
         <div class="search-result">
             <h3>CDM Monthly Report For Diabetic and Hypertensive Patients</h3>
             <p class="no-margin-top">CUMULATIVE SUMMARY</p>
@@ -30,6 +30,49 @@
                         <td><a [routerLink]="['/rptDetail/']" [queryParams]="{month: report.month, loc: report.location_id, cat: 'ND'}">{{report.new_diabetic}}</a></td>
                         <td><a [routerLink]="['/rptDetail/']" [queryParams]="{month: report.month, loc: report.location_id, cat: 'KD'}">{{report.known_diabetic}}</a></td>
                         <td><a [routerLink]="['/rptDetail/']" [queryParams]="{month: report.month, loc: report.location_id, cat: 'HD'}">{{report.hypertensive_Diabetic}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+    </div> -->
+
+
+    <!--------------- PATIENT LIST ---------------->
+    
+    <div class="no-record">
+        <div class="search-result">
+            <h3 style="text-align: center;">CDM Monthly Report For Diabetic and Hypertensive Patients</h3>
+            <p class="no-margin-top">NEW HYPERTENSIVE PATIENT LIST</p>
+            <table class="pt4a-table">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Location</th>
+                        <th>New Hypertensive</th>
+                        <th>Known Hypertensive</th>
+                        <th>New Diabetic</th>
+                        <th>Known Diabetic</th>
+                        <th>Hypertensive & Diabetic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Isaiah Thomas</td>
+                        <td>PG</td>
+                        <td>5'9"</td>
+                        <td>02-07-1989</td>
+                        <td>$473,604</td>
+                        <td>08-13-1990</td>
+                        <td>$4,917,000</td>
+                    </tr>
+                    <tr>
+                        <td>Ben McLemore</td>
+                        <td>SG</td>
+                        <td>6'5"</td>
+                        <td>02-11-1993</td>
+                        <td>$2,895,960</td>
+                        <td>08-13-1990</td>
+                        <td>$4,917,000</td>
                     </tr>
                 </tbody>
             </table>

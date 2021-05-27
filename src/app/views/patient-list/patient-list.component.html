@@ -6,8 +6,7 @@
         <p>Please Search for patient using name to generate Patient Information</p>        
     </div> -->
     <div class="no-record">
-        <div class="search-result">
-            <div class="records-container">                
+        <div class="search-result">                
             <h3>All CDM Patient Records</h3>
             <input type="text" class="form-control" name="name" [(ngModel)]="name" (ngModelChange)="Search()" placeholder="Enter First name to search">
             <table class="pt4a-table">
@@ -27,21 +26,19 @@
                 <tbody>
                     
                     <tr *ngFor="let patient of patients">
-                        <td>{{patient.patient_id}}</td>
+                        <td>{{patient.id}}</td>
                         <td>{{patient.name}}</td>
                         <td>{{patient.dob}}</td>
                         <td>{{patient.gender}}</td>
                         <td>{{patient.phone_number}}</td>
-                        <td>{{patient.dob}}</td>
+                        <td>{{patient.Age}}</td>
                         <td>{{patient.date_created}}</td>
-                        <td>{{patient.patient_id}}</td>
-                        <td>{{patient.patient_id}}</td>
+                        <td>{{patient.htn_status}}</td>
+                        <td>{{patient.dm_status}}</td>
                     </tr>
                 </tbody>
                 <pagination-controls (pageChange)="p = $event"></pagination-controls>
             </table>
-            </div>
-            <div class="more-details-pane"></div>
         </div>        
     </div>
 </div>

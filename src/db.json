@@ -1,0 +1,63 @@
+{
+    "Locations":[
+        {
+            "id": 1,
+            "name": "Location 1",
+            "date_created": "2017-07-01"
+        },
+        {
+            "id": 2,
+            "name": "Location 2",
+            "date_created": "2017-07-01"
+        },
+        {
+            "id":3,
+            "name": "Location 3",
+            "date_created": "2017-07-01"
+        },
+        {
+            "id": 4,
+            "name": "Location 4",
+            "date_created": "2017-07-01"
+        },
+        {
+            "id": 5,
+            "name": "Location 5",
+            "date_created": "2017-07-01"
+        }
+    ],
+    "Patients":[
+        {
+            "patient_id": 1,
+            "name": "Patient 1",
+            "dob": "1990-07-03",
+            "gender": "MALE",
+            "phone_number": "0726535301",
+            "date_created": "2021-09-06"
+        },
+        {
+            "patient_id": 2,
+            "name": "Patient 2",
+            "dob": "1990-07-03",
+            "gender": "MALE",
+            "phone_number": "0726535301",
+            "date_created": "2021-09-06"
+        },
+        {
+            "patient_id": 3,
+            "name": "Patient 3",
+            "dob": "1990-07-03",
+            "gender": "MALE",
+            "phone_number": "0726535301",
+            "date_created": "2021-09-06"
+        },
+        {
+            "patient_id": 4,
+            "name": "Patient 4",
+            "dob": "1990-07-03",
+            "gender": "MALE",
+            "phone_number": "0726535301",
+            "date_created": "2021-09-06"
+        }
+    ]
+}
