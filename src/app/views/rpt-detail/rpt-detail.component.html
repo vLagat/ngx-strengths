@@ -1,48 +1,12 @@
 
 <div class="main-container">
-    <!-- <div class="no-record">
-        <h4><i class="fa fa-eye-slash fa-5x"></i></h4>
-        <h6>No Patient Record to View</h6>
-        <p>Please Search for patient using name to generate Patient Information</p>        
-    </div> -->
-    <!-- <div class="no-record">
-        <div class="search-result">
-            <h3>CDM Monthly Report For Diabetic and Hypertensive Patients</h3>
-            <p class="no-margin-top">CUMULATIVE SUMMARY</p>
-            <table class="pt4a-table">
-                <thead>
-                    <tr>
-                        <th>Month</th>
-                        <th>Location</th>
-                        <th>New Hypertensive</th>
-                        <th>Known Hypertensive</th>
-                        <th>New Diabetic</th>
-                        <th>Known Diabetic</th>
-                        <th>Hypertensive and Diabetic</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let report of reports">
-                        <td>{{report.month}}</td>
-                        <td>{{report.location_id}}</td>
-                        <td><a [routerLink]="['/rptDetail/']" [queryParams]="{month: report.month, loc: report.location_id, cat: 'NH'}">{{report.new_hypertensive}}</a></td>
-                        <td><a [routerLink]="['/rptDetail/']" [queryParams]="{month: report.month, loc: report.location_id, cat: 'KH'}">{{report.known_hypertensive}}</a></td>
-                        <td><a [routerLink]="['/rptDetail/']" [queryParams]="{month: report.month, loc: report.location_id, cat: 'ND'}">{{report.new_diabetic}}</a></td>
-                        <td><a [routerLink]="['/rptDetail/']" [queryParams]="{month: report.month, loc: report.location_id, cat: 'KD'}">{{report.known_diabetic}}</a></td>
-                        <td><a [routerLink]="['/rptDetail/']" [queryParams]="{month: report.month, loc: report.location_id, cat: 'HD'}">{{report.hypertensive_Diabetic}}</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>        
-    </div> -->
-
-
     <!--------------- PATIENT LIST ---------------->
     
     <div class="no-record">
         <div class="search-result">
             <h3 style="text-align: center;">CDM Monthly Report For Diabetic and Hypertensive Patients</h3>
-            <p class="no-margin-top">NEW HYPERTENSIVE PATIENT LIST</p>
+            <p class="no-margin-top">NEW HYPERTENSIVE PATIENT LIST [Category: {{ cat }}]</p>
+           <p> Month: {{ month }} | Location: {{ loc }}</p>          
             <table class="pt4a-table">
                 <thead>
                     <tr>

@@ -24,7 +24,7 @@
     margin-top: 60px;
 }
 .no-record h6 {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     padding: 0px;
     margin: 0px;
@@ -33,10 +33,47 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .no-record p {
-    font-size: 18px;
+    font-size: 13px;
     text-align: center;
     padding: 0px;
-    padding-top: 10px;
+    padding-top: 4px;
     margin: 0px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.textBox {
+    width: 50%;
+    height: 40px;
+    background-color: #eeeeee;
+    margin: 6px 25%;
+    align-self: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    border-style: none;
+    border: 1px solid #cccccc;
+}
+.textBox:active {
+    border: none;
+    background-color: transparent;
+}
+.search-btn {
+    margin: 10px 45%;
+    width: 120px;
+    height: 36px;
+    border-style:none;
+    color: #ffffff;
+    cursor: pointer;
+    background-color:#00adab;
+    border-radius: 10px 10px 10px 10px;
+}
+.search-btn:hover {
+    color:#00adab;
+    background-color: transparent;
+    border: 1px solid #00adab;
+    border-radius: 10px 10px 10px 10px;
+}
+.search-btn:active {
+    color: #ffffff;
+    background-color:#00adab;
 }

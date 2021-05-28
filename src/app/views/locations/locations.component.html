@@ -7,42 +7,10 @@
     <div class="no-record">
         <div class="search-result">
             <h3>All Point Of Care Facility Locations</h3>
-            <table class="pt4a-table">
-                <thead>
-                    <tr>
-                        <th>Ref Number</th>
-                        <th>Name</th>
-                        <th>Created On</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let location of locations">
-                        <td>{{location.id}}</td>
-                        <td>{{location.name}}</td>
-                        <td>{{location.date_created}}</td>
-                    </tr>
-                    <!-- <tr>
-                        <td>Isaiah Thomas</td>
-                        <td>5'9"</td>
-                        <td>$473,604</td>
-                    </tr>
-                    <tr>
-                        <td>6'5"</td>
-                        <td>02-11-1993</td>
-                        <td>$4,917,000</td>
-                    </tr>
-                    <tr>
-                        <td>05-05-1987</td>
-                        <td>Marcus Thornton</td>
-                        <td>$4,917,000</td>
-                    </tr>
-                    <tr>
-                        <td>$4,917,000</td>
-                        <td>PF</td>
-                        <td>6'11"</td>
-                    </tr> -->
-                </tbody>
-            </table>
+            <div *ngFor="let location of locations" class="location-tag">
+                <div class="ref"><h5>{{ location.id }}</h5></div>
+                <div class="metadata"><h5>{{ location.name }}</h5></div>
+            </div>
         </div>        
     </div>
 </div>

@@ -1,7 +1,9 @@
 <div class="main-container">
     <div class="no-record">
-        <h4><i class="fa fa-eye-slash fa-5x"></i></h4>
+        <h4><i class="fa fa-eye-slash fa-3x"></i></h4>
         <h6>No Patient Record to View</h6>
         <p>Please Search for patient using name to generate Patient Information</p>        
-    </div>
+    <input type="text" class="textBox" name="name" [(ngModel)]="name" (ngModelChange)="Search()" placeholder="Enter First name to search">
+    <button class="search-btn">SEARCH</button>
+</div>
 </div>

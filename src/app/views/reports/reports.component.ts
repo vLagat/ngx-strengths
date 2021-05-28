@@ -11,6 +11,9 @@ import { Routes, RouterModule } from '@angular/router'
 export class ReportsComponent implements OnInit {
   reports: Reports[] = [];
   name: any;
+  public month: any = '2012-04';
+  public loc: string = '84';
+  public cat: string = 'ND';
 
   constructor(public rs: ReportService) { }
 
