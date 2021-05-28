@@ -69,7 +69,7 @@
                 <!------------------------------------------------->
                 <!------------- Display in search snapshot--------->
                 <!------------------------------------------------->
-                <div class="search-param">
+                <div *ngIf="active_r === '/initial'" class="search-param">
                     <h4>Patient Search</h4>
                     <p>Search for Patient using their name</p>
                     <div class="input-box">
@@ -79,40 +79,50 @@
                 <!-------------------------------------------------------->
                 <!------------- Display in Patients List snapshot--------->
                 <!-------------------------------------------------------->
-                <!-- <div class="search-param">
+                <div class="search-param" *ngIf="active_r === '/patient-list'">
                     <h4>Patients Data List</h4>
                     <p>List of all Patients Registered</p>
                     <div class="input-box">
                         <span class="more-info not-italic"><p>Patient List and Their Respective CDM Category</p></span>                 
                     </div>                    
-                </div>                    -->
+                </div>                   
                 <!---------------------------------------------------->
                 <!------------- Display in Locations snapshot--------->
                 <!---------------------------------------------------->        
-                    <!-- <div class="location-param">
+                    <div class="location-param" *ngIf="active_r === '/locations'">
                         <h4>Health Facilities</h4>
                         <p>List Of all Healthcare locations</p>
                         <div class="input-box">
                             <span class="more-info not-italic"><p>List of all Point of Care Locations - Records</p></span>                 
                         </div>                    
-                    </div>                -->
+                    </div>               
                 <!------------------------------------------------->
                 <!------------- Display in Report snapshot--------->
                 <!------------------------------------------------->
-                <!-- <div class="report-param">
+                <div class="report-param" *ngIf="active_r === '/reports'">
                     <h4>CDM Monthly Reports</h4>
                     <p>Chronic Disease Management Reports</p>
                     <div class="input-box">
-                        <span class="more-info not-italic"><p>For Diabetic and Hypertensive Patients - Records</p></span>                 
+                        <span class="more-info not-italic"><p>Monthly Diabetic and Hypertensive Reports</p></span>                 
                     </div>                    
-                </div> -->
+                </div>
+                <!------------------------------------------------->
+                <!------------- Display in General snapshot--------->
+                <!------------------------------------------------->
+                <div class="report-param" *ngIf="active_r !== '/patient-list' && active_r !== '/locations' && active_r !== '/initial' && active_r !== '/reports'">
+                    <h4>Welcome, Admin</h4>
+                    <p>Chronic Disease Management Dashboard</p>
+                    <div class="input-box">
+                        <span class="more-info not-italic"><p>Based On Clinical Encounter Visits</p></span>                 
+                    </div>                    
+                </div>
             </div>
         </div>
         <!--------------- Navigation bar --------------->
         <div class="nav-bar"></div>
         <!--------------- Bread crumps --------------->
         <div class="bread-crumps">
-            <p> <a  routerLink="/">Home</a>  /  <span>Patient detail search by name</span></p>
+            <p> <a  routerLink="/">Home</a>  /  <span *ngIf="active_r === '/initial'">Search Patient by Name</span><span *ngIf="active_r === '/patient-list'">CDM Patient List</span><span *ngIf="active_r === '/locations'">List of All Facility Locations</span><span *ngIf="active_r === '/reports'">CDM Monthly Reports By Location</span><span *ngIf="active_r === '/'">Patient Search & Care </span><span *ngIf="active_r !== '/patient-list' && active_r !== '/locations' && active_r !== '/initial' && active_r !== '/reports'">Reports and other functions</span></p>
         </div>
         <!--------------- Main content --------------->
         <div class="content-flex">            
