@@ -10,33 +10,24 @@
             <table class="pt4a-table">
                 <thead>
                     <tr>
-                        <th>Month</th>
+                        <th>Patient Name</th>
+                        <th>Encounter Date</th>
                         <th>Location</th>
-                        <th>New Hypertensive</th>
-                        <th>Known Hypertensive</th>
-                        <th>New Diabetic</th>
-                        <th>Known Diabetic</th>
-                        <th>Hypertensive & Diabetic</th>
+                        <th>Hypertension Status</th>
+                        <th>Diabetes Status</th>
+                        <th>Gender</th>
+                        <th>Age</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Isaiah Thomas</td>
-                        <td>PG</td>
-                        <td>5'9"</td>
-                        <td>02-07-1989</td>
-                        <td>$473,604</td>
-                        <td>08-13-1990</td>
-                        <td>$4,917,000</td>
-                    </tr>
-                    <tr>
-                        <td>Ben McLemore</td>
-                        <td>SG</td>
-                        <td>6'5"</td>
-                        <td>02-11-1993</td>
-                        <td>$2,895,960</td>
-                        <td>08-13-1990</td>
-                        <td>$4,917,000</td>
+                    <tr *ngFor="let patient of patients">
+                        <td>{{patient.name}}</td>
+                        <td>{{patient.encounter_datetime}}</td>
+                        <td>{{patient.location_id}}</td>
+                        <td>{{patient.htn_status}}</td>
+                        <td>{{patient.dm_status}}</td>
+                        <td>{{patient.gender}}</td>
+                        <td>{{patient.Age}}</td>
                     </tr>
                 </tbody>
             </table>
