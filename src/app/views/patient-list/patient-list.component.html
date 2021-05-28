@@ -18,21 +18,18 @@
                         <th>Gender</th>
                         <th>Contact Details</th>
                         <th>Age</th>
-                        <th>Registered On</th>
                         <th>HTN Status</th>
                         <th>DM Status</th>
                     </tr>
                 </thead>
-                <tbody>
-                    
+                <tbody>                    
                     <tr *ngFor="let patient of patients">
-                        <td>{{patient.id}}</td>
+                        <td>{{patient.patient_id}}</td>
                         <td>{{patient.name}}</td>
                         <td>{{patient.dob}}</td>
                         <td>{{patient.gender}}</td>
                         <td>{{patient.phone_number}}</td>
                         <td>{{patient.Age}}</td>
-                        <td>{{patient.date_created}}</td>
                         <td>{{patient.htn_status}}</td>
                         <td>{{patient.dm_status}}</td>
                     </tr>
