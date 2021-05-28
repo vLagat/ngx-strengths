@@ -13,9 +13,9 @@ export class RptDetailComponent implements OnInit {
   name: any;
   p:number = 1;
   
-  public month: any;
+  public month: string;
   public loc: number;
-  public cat: any;
+  public cat: string;
 
   constructor(private route: ActivatedRoute, public rs: PatientService) { }
 

@@ -21,9 +21,7 @@ export class AppComponent implements OnDestroy {
           .subscribe(
             (event: NavigationEvent) => {
               if(event instanceof NavigationStart) {
-                console.log("Active Route", event.url);
                 this.active_r = event.url;
-                console.log("active_r", this.active_r);
               }
             });
   }

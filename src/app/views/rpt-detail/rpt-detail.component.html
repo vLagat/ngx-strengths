@@ -20,7 +20,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let patient of patients">
+                    <tr *ngIf="let patient of patients">
                         <td>{{patient.name}}</td>
                         <td>{{patient.encounter_datetime}}</td>
                         <td>{{patient.location_id}}</td>
