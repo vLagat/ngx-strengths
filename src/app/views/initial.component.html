@@ -1,9 +1,40 @@
 <div class="main-container">
     <div class="no-record">
-        <h4><i class="fa fa-eye-slash fa-3x"></i></h4>
-        <h6>No Patient Record to View</h6>
-        <p>Please Search for patient using name to generate Patient Information</p>        
-    <input type="text" class="textBox" name="name" [(ngModel)]="name" (ngModelChange)="Search()" placeholder="Enter First name to search">
-    <button class="search-btn">SEARCH</button>
+        <div class="no-record-found">
+            <h4><i class="fa fa-eye-slash fa-3x"></i></h4>
+            <h6>No Patient Record to View</h6>
+            <p>Please Search for patient using name to generate Patient Information</p>
+        </div>
+        <div class="record-found">
+            <table class="pt4a-table">
+                <thead>
+                    <tr>
+                        <th>#ID</th>
+                        <th>Name</th>
+                        <th>Date Of Birth</th>
+                        <th>Gender</th>
+                        <th>Contact Details</th>
+                        <th>Age</th>
+                        <th>HTN Status</th>
+                        <th>DM Status</th>
+                    </tr>
+                </thead>
+                <tbody>                    
+                    <tr *ngFor="let patient of patients">
+                        <td>{{patient.patient_id}}</td>
+                        <td>{{patient.name}}</td>
+                        <td>{{patient.dob}}</td>
+                        <td>{{patient.gender}}</td>
+                        <td>{{patient.phone_number}}</td>
+                        <td>{{patient.Age}}</td>
+                        <td>{{patient.htn_status}}</td>
+                        <td>{{patient.dm_status}}</td>
+                    </tr>
+                </tbody>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </table>
+        </div>
+    <input type="text" class="textBox" name="name" [(ngModel)]="name" placeholder="Enter First name to search">
+    <button (click) = "Search()" class="search-btn">SEARCH</button>
 </div>
 </div>

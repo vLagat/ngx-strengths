@@ -39,6 +39,7 @@ export class InitialComponent implements OnInit {
 
   }
 
+
   Search(){
     if(this.name == ""){
       this.ngOnInit();

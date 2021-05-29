@@ -8,8 +8,11 @@ export class Patients {
     encounter_datetime: string;
     location_id: string;
     encounter_datetime_min: string;
+    htn_status: string;
+    dm_status: string;
+    Age: string;
 
-    constructor(patient_id, name,dob,gender,phone_number, date_created,encounter_datetime,location_id,encounter_datetime_min){
+    constructor(patient_id, name,dob,gender,phone_number, date_created,encounter_datetime,location_id,encounter_datetime_min,htn_status,dm_status,Age){
         this.patient_id=patient_id;
         this.name=name;
         this.dob=dob;
@@ -19,5 +22,8 @@ export class Patients {
         this.encounter_datetime=encounter_datetime;
         this.location_id=location_id;
         this.encounter_datetime_min=encounter_datetime_min;
+        this.htn_status;
+        this.dm_status;
+        this.Age;
     }
 }

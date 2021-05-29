@@ -17,6 +17,7 @@ import { LocationsComponent } from './views/locations/locations.component';
 import { ReportsComponent } from './views/reports/reports.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RptDetailComponent } from './views/rpt-detail/rpt-detail.component';
+import { SplashComponent } from './views/splash/splash.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RptDetailComponent } from './views/rpt-detail/rpt-detail.component';
     PatientListComponent,
     LocationsComponent,
     ReportsComponent,
-    RptDetailComponent
+    RptDetailComponent,
+    SplashComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,FormsModule,
