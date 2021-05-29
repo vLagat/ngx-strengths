@@ -12,11 +12,16 @@ export class InitialComponent implements OnInit {
   patients: Patients[] = [];
   name: any;
   p:number = 1;
-  url_key: any = ''
+  url_key: any = '';
+  searchRes: boolean;
+  endSearch: boolean;
 
   constructor(public rs: PatientService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+   this.searchRes = false;
+   this.endSearch = false;
     this.rs.getPatients().subscribe((response) => {
       this.patients=response;
     })
@@ -46,7 +51,8 @@ export class InitialComponent implements OnInit {
     } else{
       this.patients = this.patients.filter(res =>{
         return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
-      });
+      });      
+      this.endSearch = false;
     }
   }
 

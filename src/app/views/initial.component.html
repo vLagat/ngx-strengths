@@ -6,7 +6,7 @@
             <p>Please Search for patient using name to generate Patient Information</p>
         </div>
         <div class="record-found">
-            <table class="pt4a-table">
+            <table class="pt4a-table" *ngIf="searchRes">
                 <thead>
                     <tr>
                         <th>#ID</th>
@@ -35,6 +35,6 @@
             </table>
         </div>
     <input type="text" class="textBox" name="name" [(ngModel)]="name" placeholder="Enter First name to search">
-    <button (click) = "Search()" class="search-btn">SEARCH</button>
+    <button (click) = "Search()" (click)="searchRes = !searchRes" class="search-btn">SEARCH</button>
 </div>
 </div>
