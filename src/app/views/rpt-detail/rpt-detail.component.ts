@@ -34,29 +34,6 @@ export class RptDetailComponent implements OnInit {
     this.loc = this.route.snapshot.queryParams['loc'];
     this.cat = this.route.snapshot.queryParams['cat'];
 
-    if (this.cat === 'NH'){
-      this.params = 'New Hypertensive';
-    } 
-    
-    else if(this.cat === 'KH'){
-      this.params = 'Known Hypertensive';      
-    } 
-    
-    else if(this.cat === 'ND'){
-      this.params = 'New Diabetic';
-      
-    } 
-    
-    else if(this.cat === 'KD'){
-      this.params = 'Known Diabetic';
-      
-    } 
-    
-    else {
-      this.params = 'Hypertensive_Diabetic';
-      
-    }
-
    this.getPatientList(this.loc, this.month, this.params);
     
   }
@@ -71,27 +48,22 @@ export class RptDetailComponent implements OnInit {
         this.patients = this.locationData.filter(function(v, i) {
           return v.htn_status == "New Hypertensive";
         });
-        console.log("NH >>", this.patients)
       } else if(this.cat == "KH"){
         this.patients = this.locationData.filter(function(v, i) {
           return v.htn_status == "Known Hypertensive";
         });
-        console.log("KH >>", this.patients)
       } else if(this.cat == "ND"){
         this.patients = this.locationData.filter(function(v, i) {
           return v.dm_status == "New Diabetic";
         });
-        console.log("ND >>", this.patients)
       } else if(this.cat == "KD"){
         this.patients = this.locationData.filter(function(v, i) {
           return v.dm_status == "Known Diabetic";
         });
-        console.log("KD >>", this.patients)
       } else if(this.cat == "HD"){
         this.patients = this.locationData.filter(function(v, i) {
           return ((v.htn_status == "New Hypertensive" || v.htn_status == "Known Hypertensive") && (v.dm_status == "New Diabetic" || v.dm_status == "Known Diabetic"));
         }); //Represents both Hypertensive & Diabetic
-        console.log("HD................. >>", this.patients)
       }
     });    
   };
