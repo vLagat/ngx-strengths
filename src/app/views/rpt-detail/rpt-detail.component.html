@@ -5,7 +5,12 @@
     <div class="no-record">
         <div class="search-result">
             <h3 style="text-align: center;">CDM Monthly Report For Diabetic and Hypertensive Patients</h3>
-            <p class="no-margin-top">NEW HYPERTENSIVE PATIENT LIST [Category: {{ cat }}]</p>
+            <p class="no-margin-top">
+                <span class="bg-blue" style="font-weight: bold;" *ngIf="cat == 'NH'">NEW HYPERTENSIVE</span>
+                <span style="font-weight: bold;" *ngIf="cat == 'KH'">KNOWN HYPERTENSIVE</span>
+                <span style="font-weight: bold;" *ngIf="cat == 'ND'">NEW DIABETIC</span>
+                <span style="font-weight: bold;" *ngIf="cat == 'KD'">KNOWN DIABETIC</span>
+                <span style="font-weight: bold;" *ngIf="cat == 'HD'">HYPERTENSIVE & DIABETIC</span> PATIENT LIST</p>
            <p> Month: {{ month }} | Location: {{ loc }}</p>          
             <table class="pt4a-table">
                 <thead>
