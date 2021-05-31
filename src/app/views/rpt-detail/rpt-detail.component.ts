@@ -34,20 +34,20 @@ export class RptDetailComponent implements OnInit {
     this.loc = this.route.snapshot.queryParams['loc'];
     this.cat = this.route.snapshot.queryParams['cat'];
 
-    if (this.cat === "NH"){
+    if (this.cat === 'NH'){
       this.params = 'New Hypertensive';
     } 
     
-    else if(this.cat === "KH"){
+    else if(this.cat === 'KH'){
       this.params = 'Known Hypertensive';      
     } 
     
-    else if(this.cat === "ND"){
+    else if(this.cat === 'ND'){
       this.params = 'New Diabetic';
       
     } 
     
-    else if(this.cat === "KD"){
+    else if(this.cat === 'KD'){
       this.params = 'Known Diabetic';
       
     } 
@@ -61,50 +61,38 @@ export class RptDetailComponent implements OnInit {
     
   }
 
-  getPatientList( loc: number, month: string, cat: string){ 
-
+  getPatientList( loc: number, month: string, cat: string){
       this.rs.getPatients().subscribe((response) => {
       this.locationData = response.filter(res => {
       return (res.location_id.toString().match(loc.toString()) && 
-              (res.encounter_datetime_min.toString().match(month)));
+              (res.encounter_datetime_min.toString().match(month)));              
       });
-
-
-      if(cat='NH'){
-        this.patients = this.locationData.filter(data => {
-          return data.htn_status.match(this.params.toString());
-        });          
+      if(this.cat == "NH"){
+        this.patients = this.locationData.filter(function(v, i) {
+          return v.htn_status == "New Hypertensive";
+        });
+        console.log("NH >>", this.patients)
+      } else if(this.cat == "KH"){
+        this.patients = this.locationData.filter(function(v, i) {
+          return v.htn_status == "Known Hypertensive";
+        });
+        console.log("KH >>", this.patients)
+      } else if(this.cat == "ND"){
+        this.patients = this.locationData.filter(function(v, i) {
+          return v.dm_status == "New Diabetic";
+        });
+        console.log("ND >>", this.patients)
+      } else if(this.cat == "KD"){
+        this.patients = this.locationData.filter(function(v, i) {
+          return v.dm_status == "Known Diabetic";
+        });
+        console.log("KD >>", this.patients)
+      } else if(this.cat == "HD"){
+        this.patients = this.locationData.filter(function(v, i) {
+          return ((v.htn_status == "New Hypertensive" || v.htn_status == "Known Hypertensive") && (v.dm_status == "New Diabetic" || v.dm_status == "Known Diabetic"));
+        }); //Represents both Hypertensive & Diabetic
+        console.log("HD................. >>", this.patients)
       }
-
-
-      else if(cat='KH') {
-        this.patients = this.locationData.filter(data => {
-          return data.htn_status.match(this.params.toString());
-      });          
-      }
-
-
-      else if(cat='ND') {
-        this.patients = this.locationData.filter(data => {
-          return data.dm_status.match(this.params.toString());
-      });                    
-      }
-
-
-      else if(cat='KD') {
-        this.patients = this.locationData.filter(data => {
-          return data.dm_status.match(this.params.toString());
-      });                   
-      }
-
-      // else {
-      //   this.patients = this.locationData.filter(data => {
-      //   return ((data.htn_status === 'New Hypertensive' || data.htn_status === 'Known Hypertensive') && 
-      //   (data.dm_status === 'New Diabetic' || data.dm_status === 'Known Diabetic'));
-      // });                    
-      // } 
-      //Represents both Hypertensive & Diabetic
-    console.log("<><><>", this.patients);
     });    
   };
 }
