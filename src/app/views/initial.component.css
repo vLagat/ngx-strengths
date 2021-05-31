@@ -77,3 +77,47 @@
     color: #ffffff;
     background-color:#00adab;
 }
+
+
+/*****************************************/
+/********* START: Media Queries **********/
+/*****************************************/
+
+/***** Up-to 1024px Max *****/
+@media (max-width: 1024px) {
+.no-record {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    min-height: 500px;
+    border: 1px solid #dddddd;
+    border-radius: 6px 6px 6px 6px;
+    background-color: rgba(255, 255, 255,.8);
+}
+}
+/***** Up-to 768px Max *****/
+@media (max-width: 768px) {
+
+}
+/***** Up-to 425px Max *****/
+@media (max-width: 425px) {
+
+}
+
+/***** Up-to 375px Max *****/
+@media (max-width: 375px) {
+
+}
+
+/***** Up-to 320px Max *****/
+@media (max-width: 320px) {
+
+}
+
+/***** Up-to 280px Max *****/
+@media (max-width: 280px) {
+}
+    
+/***************************************/
+/********* END: Media Queries **********/
+/***************************************/

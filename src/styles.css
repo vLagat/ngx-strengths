@@ -175,7 +175,7 @@ body {
 .nav-bar {
     width: 100%;
     height: 38px;
-    background-color: rgba(0,0,0,.4);
+    /* background-color: rgba(0,0,0,.4); */
     border-bottom: 1px solid #dddddd;
     display: none;
 }
@@ -288,6 +288,16 @@ tr:nth-of-type(odd) {
 }
 .nav-bar {
     display: block;
+    padding-left: 20px;
+}
+.nav-bar a {
+    text-align: left;
+    list-style: none;
+    display: inline-block;
+    padding: 10px 5px;
+}
+.nav-bar i {
+    padding-right: 10px;
 }
 .bread-crumps {
     display:none;

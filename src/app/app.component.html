@@ -125,7 +125,13 @@
             </div>
         </div>
         <!--------------- Navigation bar --------------->
-        <div class="nav-bar"></div>
+        <div class="nav-bar">
+            <a routerLinkActive="active" routerLink="/"><p class="tag"><i class="fa fa-search"></i>Search</p></a>
+            <a routerLinkActive="active" routerLink="/patient-list"><p class="tag"><i class="fa fa-users"></i>Patients</p></a>
+            <a routerLinkActive="active" routerLink="/locations"><p class="tag"><i class="fa fa-map-marker"></i>Locations</p></a>
+            <a routerLinkActive="active" routerLink="/reports"><p class="tag"><i class="fa fa-file"></i>Reports</p></a> 
+
+        </div>
         <!--------------- Bread crumps --------------->
         <div class="bread-crumps">
             <p> <a  routerLink="/">Home</a>  /  <span *ngIf="active_r === '/initial'">Search Patient by Name</span><span *ngIf="active_r === '/patient-list'">CDM Patient List</span><span *ngIf="active_r === '/locations'">List of All Facility Locations</span><span *ngIf="active_r === '/reports'">CDM Monthly Reports By Location</span><span *ngIf="active_r === '/'">Patient Search & Care </span><span *ngIf="active_r !== '/patient-list' && active_r !== '/locations' && active_r !== '/initial' && active_r !== '/reports'">Reports and other functions</span></p>
